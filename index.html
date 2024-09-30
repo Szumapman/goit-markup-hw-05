@@ -401,17 +401,17 @@
 
     <footer class="footer">
       <div class="footer-content container">
-        <div>
+        <div class="footer-logo-text">
           <a href="./index.html" class="logo nav-item"
-            >Web<span class="logo-light nav-item">studio</span></a
-          >
+            >Web<span class="logo-light nav-item">studio</span>
+          </a>
           <p class="footer-text">
             Increase the flow of customers and<br />sales for your business with
             digital <br />marketing &amp; growth solutions.
           </p>
         </div>
-        <div>
-          <h4 class="footer-social-media-header">Social media</h4>
+        <div class="footer-social-media">
+          <h4 class="footer-header">Social media</h4>
           <ul class="footer-social-media-list">
             <li>
               <a href="" class="footer-social-media-list-item-link">
@@ -442,6 +442,31 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div>
+          <form class="footer-subscribe-form">
+            <label
+              for="footer-subscribe-email"
+              class="footer-subscribe-form-label footer-heder"
+            >
+              Subscribe
+            </label>
+            <div class="footer-subscribe-form-input-button">
+              <input
+                type="email"
+                name="email"
+                id="footer-subscribe-email"
+                class="footer-subscribe-input"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="footer-subscribe-button">
+                Subscribe
+                <svg class="footer-subscribe-button-icon">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
