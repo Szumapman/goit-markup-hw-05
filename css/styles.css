@@ -134,6 +134,7 @@ p {
 .nav-item:focus,
 .nav-item:hover {
   color: var(--ocean);
+  transition: color var(--default-transision);
 }
 
 .underlined {
@@ -202,6 +203,7 @@ p {
 
 .button:hover {
   background-color: var(--ocean);
+  transition: background-color var(--default-transision);
 }
 
 .hidden {
@@ -322,6 +324,7 @@ p {
 
 .team-card-social-link:hover {
   background-color: var(--ocean);
+  transition: background-color var(--default-transision);
 }
 
 .team-card-social-icon {
@@ -356,9 +359,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: var(--iris);
-
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out 250ms;
 }
 
 .portfolio-list-item-photo-description-overlay p {
@@ -370,6 +371,7 @@ p {
 .portfolio-list-item:hover .portfolio-list-item-photo-description-overlay {
   transform: translateY(0);
   box-shadow: var(--card-shadow);
+  transition: transform var(--default-transision), box-shadow var(--default-transision);
 }
 
 .portfolio-list-item img {
@@ -380,6 +382,7 @@ p {
 
 .portfolio-list-item:hover {
   box-shadow: var(--card-shadow);
+  transition: box-shadow var(--default-transision);
 }
 
 .portfolio-list-item-description {
@@ -448,6 +451,7 @@ p {
 
 .footer-social-media-list-item-link:hover {
   background-color: var(--green);
+  transition: background-color var(--default-transision);
 }
 
 .footer-subscribe-form {
@@ -485,7 +489,7 @@ p {
   font-size: 12px;
   line-height: 2;
   font-weight: 400;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
 
 }
 
@@ -507,6 +511,7 @@ p {
 }
 .footer-subscribe-button:hover {
   background-color: var(--ocean);
+  transition: background-color var(--default-transision);
 }
 .footer-subscribe-button-icon {
   width: 24px;
@@ -617,7 +622,7 @@ p {
 .modal-form-label {
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   font-weight: 400;
   color: var(--light-slate);
 }
@@ -684,7 +689,7 @@ p {
   color: var(--navy-blue);
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   font-weight: 400;
   outline: transparent;
   resize: none;
@@ -693,4 +698,93 @@ p {
 .modal-form-comment:focus {
   border-color: var(--iris);
   transition: border-color var(--default-transision);
+}
+
+.modal-form-checkbox-container {
+  margin-bottom: 24px;
+}
+
+.modal-form-checkbox-input  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form-checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  color: var(--light-slate);
+  cursor: pointer;
+}
+
+.modal-form-checkbox-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 2px;
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.modal-form-checkbox-icon {
+  width: 10px;
+  height: 8px;
+  fill: none;
+}
+
+.modal-form-checkbox-label-link {
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: var(--iris);
+}
+
+.modal-form-checkbox-input:checked + .modal-form-checkbox-label .modal-form-checkbox-box {
+  background-color: var(--iris);
+  border-color: var(--iris);
+  fill: var(--cloud);
+  transition: background-color var(--default-transision), border-color var(--default-transision), fill var(--default-transision);
+}
+
+.modal-form-checkbox-label-link:visited {
+  color: var(--slate);
+  transition: color var(--default-transision);
+}
+
+.modal-form-submit-button {
+  display: block;
+  width: 169px;
+  margin: auto;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--iris);
+  color: var(--white);
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.modal-form-submit-button:hover,
+.modal-form-submit-button:focus {
+  background-color: var(--ocean);
+  transition: background-color var(--default-transision);
 }
